@@ -4,9 +4,21 @@ import ReactDOM from 'react-dom'//吧创建好的组件和虚拟dom放到页面�
 
 //创建虚拟dom 元素名称  元素属性对象   子节点
 // const myH1 = React.createElement('h1',null,'这是一个大大的h1')
+
+const strArray = ['2331','2332','2333']
+const elementArray = []
+
+strArray.forEach(item => {
+
+    const temp = <h5>{item}</h5>
+    elementArray.push(temp)
+})
+
 const myDiv = <div id="mydiv">
     这是一个div元素
     <h1>我是h1</h1>
+    <hr></hr>
+    {elementArray}
 </div>
 // 使用reacDom 渲染 参数1 要渲染的dom元素  参数2 指定容器
 ReactDOM.render(myDiv,document.getElementById('app'))
